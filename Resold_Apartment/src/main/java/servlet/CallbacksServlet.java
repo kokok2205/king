@@ -84,7 +84,7 @@ public class CallbacksServlet extends HttpServlet {
                 //判断是否有该用户
                 if(uname.equals("")){
                     //没有该用户
-                    response.sendRedirect("/Resold_Apartment/registered.jsp");//跳转注册页面
+                    response.sendRedirect("/Resold_Apartment/registered.html");//跳转注册页面
                 }else{
                     //存在该用户
                     response.sendRedirect("/Resold_Apartment/zhan.html");//跳转展示页面

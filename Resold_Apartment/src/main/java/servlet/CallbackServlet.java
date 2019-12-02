@@ -35,7 +35,7 @@ public class CallbackServlet extends HttpServlet {
             //判断是否绑定
             if(nickName.equals("")){
                 //没有绑定跳登陆页面注册绑定
-                request.getRequestDispatcher("/landing.jsp").forward(request,response);
+                request.getRequestDispatcher("/landing.html").forward(request,response);
             }else {
                 //绑定好了调房源页面
                 request.getRequestDispatcher("/zhan.html").forward(request,response);

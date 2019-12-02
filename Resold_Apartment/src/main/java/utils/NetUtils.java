@@ -116,7 +116,7 @@ public class NetUtils {
         ViewButton button12 = new ViewButton();
         button12.setType(MessageUtils.MESSAGE_EVENT_VIEW);
         button12.setName("预约记录");
-        button12.setUrl("http://king.vipgz1.idcfengye.com/Resold_Apartment/landing.jsp");
+        button12.setUrl("http://king.vipgz1.idcfengye.com/Resold_Apartment/landing.html");
         //菜单三Sub_button
         Button button1 = new Button();
         button1.setName("卖家");
