@@ -1,0 +1,63 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: asus
+  Date: 2019/11/28
+  Time: 11:14
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<html>
+<head>
+    <title>登陆</title>
+    <link rel="stylesheet" href="layui/css/layui.css"/>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+<form class="layui-form" action="/Resold_Apartment/RegisterServlet" method="post">
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号</label>
+        <div class="layui-input-inline">
+            <input type="text" name="mobile" id="mobile" required lay-verify="required" placeholder="请输手机号" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">验证码</label>
+        <div class="layui-input-inline">
+            <input type="password" name="verifyCode" id="verifyCode" required lay-verify="required" placeholder="请输入验证码" autocomplete="off"
+                   class="layui-input">
+        </div>
+        <!--注意：为避免恶意获取验证码，占用服务器资源 登陆端和注册端的获取验证码的判断是同一个 -->
+        <input type="button" id="btn" class="layui-btn layui-btn-radius layui-btn-normal" value="免费获取验证码" />
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <!--登陆-->
+                <button class="layui-btn layui-btn-radius" type="submit">
+                    <i class="layui-icon" style="font-size: 25px;color: #f3fdff;" >&#xe672;</i>
+                </button>
+                <!--注册-->
+                <a href="registered.jsp" class="layui-btn layui-btn-radius layui-btn-primary" >注册</a>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="js/chuan.js"></script>
+<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+
+</body>
+</html>
